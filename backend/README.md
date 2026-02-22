@@ -4,8 +4,8 @@
 - `cd backend`
 - `mvn spring-boot:run`
 
-## Database (MySQL)
-- App is configured for MySQL only.
+## Database (PostgreSQL)
+- App is configured for PostgreSQL.
 - Config can be set via env vars:
   - `SPRING_DATASOURCE_URL`
   - `SPRING_DATASOURCE_USERNAME`

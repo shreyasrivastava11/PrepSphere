@@ -4,7 +4,7 @@ PrepSphere is a full-stack mock interview platform.
 
 - Frontend: React + Vite
 - Backend: Spring Boot
-- Database: MySQL
+- Database: PostgreSQL
 - Deployment: Render
 
 ## Local Run
