@@ -19,7 +19,6 @@ mvn spring-boot:run
  **Render Deployment**  
 Create 2 Render services from this repository.  
 
----
 Backend (Web Service)  
 
 Runtime: Java  
@@ -34,7 +33,6 @@ SPRING_DATASOURCE_PASSWORD
 APP_JWT_SECRET  
 APP_JWT_EXPIRATION_MS (example 86400000)  
 
----
 Frontend (Static Site)  
 
 Root Directory: .  
@@ -43,8 +41,7 @@ Publish Directory: dist
 Environment variable:  
 
 VITE_API_BASE_URL = your backend Render URL (example https://prepsphere-backend.onrender.com)  
-Notes:  
-Backend CORS allows localhost and *.onrender.com.  
+Notes:Backend CORS allows localhost and *.onrender.com.  
 CI workflow is in .github/workflows/ci.yml.  
 
 ## 🔗 Live Demo  
@@ -59,6 +56,5 @@ Check out the live project here:
 - Add admin user for modification.  
 - Enhance security and authentication features.  
 
-## 📝 Author  
-
+### 📝 Author  
 **Shreya Srivastava**  
