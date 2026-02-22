@@ -78,4 +78,3 @@ git push -u origin main
 ```
 
 After push, CI runs automatically. On `main` push, CD also runs and deploys to your Linux server.
-# PrepSphere
