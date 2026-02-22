@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/prepsphere}
-    username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://dpg-d6df4ti4d50c73aok0i0-a:5432/prepsphere_db}
+    username: ${SPRING_DATASOURCE_USERNAME:prepsphere_db_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:fzw3PpUEJQtdDgJXM6wkafHXpsAGh3Rt}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
