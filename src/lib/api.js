@@ -5,6 +5,7 @@ let authToken = null;
 
 const apiClient = axios.create({
   baseURL: API_BASE,
+  timeout: 15000,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -28,6 +29,9 @@ export async function apiRequest(path, options = {}) {
     });
     return res.data;
   } catch (error) {
+    if (error.code === 'ECONNABORTED') {
+      throw new Error('Request timed out. Backend may be waking up on Render, please try again in a few seconds.');
+    }
     if (!error.response) {
       throw new Error(`Cannot reach backend at ${API_BASE}. Start backend server and check CORS/port.`);
     }
@@ -38,4 +42,9 @@ export async function apiRequest(path, options = {}) {
 
 export function getApiBase() {
   return API_BASE;
+}
+
+export function warmUpBackend() {
+  // Fire-and-forget call to reduce first-action latency on cold starts.
+  apiClient.get('/api/health').catch(() => {});
 }

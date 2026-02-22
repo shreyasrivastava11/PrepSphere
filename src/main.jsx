@@ -5,6 +5,9 @@ import App from './App';
 import './index.css';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
+import { warmUpBackend } from './lib/api';
+
+warmUpBackend();
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
