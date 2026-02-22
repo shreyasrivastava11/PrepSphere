@@ -9,8 +9,6 @@ It helps users:
 
 The system saves your data so your progress is not lost when you log out.
 
----
-
 ## 🏗 Architecture Overview
 
 - React frontend communicates with Spring Boot REST APIs.
@@ -20,8 +18,6 @@ The system saves your data so your progress is not lost when you log out.
   - Continuous Integration (build & verification)
   - Continuous Deployment (automated server deployment)
 - Deployment occurs via SSH to a Linux server using Docker Compose.
-
----
 
 ## 🧩 What This Project Uses
 
@@ -40,8 +36,6 @@ The system saves your data so your progress is not lost when you log out.
 - **GitHub Actions:**  
   → Automatically builds and deploys the project when code is updated.
 
----
-
 ## 💻 How To Run The Project On Your Computer
 
 ### Step 1 – Start Frontend
@@ -58,7 +52,7 @@ http://localhost:5173
 
 You will see the website.
 
----
+
 
 ### Step 2 – Start Backend
 
@@ -74,7 +68,7 @@ http://localhost:8080
 
 Now frontend and backend are connected.
 
----
+
 
 ## 🔐 Login System
 
@@ -82,7 +76,7 @@ Now frontend and backend are connected.
 - Data is saved in the database.
 - When you logout and login again, your progress remains saved.
 
----
+
 
 ## 🌍 Deployment (Putting Website Online)
 
@@ -95,7 +89,7 @@ It uses:
 This means:
 Whenever new code is pushed to GitHub, the server updates automatically.
 
----
+
 
 ## 📂 How To Upload To GitHub
 
@@ -113,7 +107,7 @@ git push -u origin main
 After pushing:
 The automatic build process will start.
 
----
+
 
 ## 🎯 Purpose Of This Project
 
@@ -125,7 +119,7 @@ This project shows:
 - Deployment knowledge
 - Basic DevOps understanding
 
----
+
 
 ## 🔮 Future Improvements
 
@@ -133,7 +127,7 @@ This project shows:
 - Add email notifications
 - Reintroduce role-based access with secure admin panel
 
----
+
 
 ## 👩‍💻 Created By
 
