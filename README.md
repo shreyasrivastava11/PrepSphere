@@ -149,7 +149,7 @@ git init
 git add .
 git commit -m "Initial PrepSphere setup with CI/CD and MySQL deployment"
 git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
+git remote add origin https://github.com/<shreyasrivastava11>/<PrepSphere>.git
 git push -u origin main
 ```
 
