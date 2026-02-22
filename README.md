@@ -1,20 +1,13 @@
 # PrepSphere 🚀
 
-PrepSphere is a full-stack mock interview preparation platform that allows users to practice technical interviews and improve their performance through structured question flows.
+PrepSphere is a mock interview practice website.
 
-The project follows modern DevOps practices including Dockerized deployment, GitHub Actions CI/CD, and automated Linux server deployment.
+It helps users:
+- Practice interview questions
+- Track their progress
+- Improve their preparation step-by-step
 
----
-
-## 🛠 Tech Stack
-
-- **Frontend:** React + Vite
-- **Backend:** Spring Boot
-- **Database:** MySQL
-- **Containerization:** Docker
-- **CI/CD:** GitHub Actions
-- **Deployment:** Linux Server (Docker Compose)
-- **Container Registry:** GitHub Container Registry (GHCR)
+The system saves your data so your progress is not lost when you log out.
 
 ---
 
@@ -30,132 +23,107 @@ The project follows modern DevOps practices including Dockerized deployment, Git
 
 ---
 
-## 🚀 Local Development Setup
+## 🧩 What This Project Uses
 
-### 1️⃣ Frontend
+- **Frontend (User Interface):** React  
+  → This is what you see on the screen.
 
-```bash
-npm ci
-npm run dev
-```
+- **Backend (Server Logic):** Spring Boot  
+  → This handles login, saving progress, and managing data.
 
-Runs at:  
-http://localhost:5173
+- **Database:** MySQL  
+  → This stores user information and test results safely.
+
+- **Docker:**  
+  → Helps run the whole project easily on any system.
+
+- **GitHub Actions:**  
+  → Automatically builds and deploys the project when code is updated.
 
 ---
 
-### 2️⃣ Backend
+## 💻 How To Run The Project On Your Computer
 
-```bash
+### Step 1 – Start Frontend
+
+Open terminal in project folder and run:
+
+```
+npm install
+npm run dev
+```
+
+Now open:
+http://localhost:5173
+
+You will see the website.
+
+---
+
+### Step 2 – Start Backend
+
+Go to backend folder:
+
+```
 cd backend
 mvn spring-boot:run
 ```
 
-Runs at:  
+Backend runs at:
 http://localhost:8080
 
----
-
-## 🔐 Authentication & Roles
-
-The project currently operates in **single-role mode (USER)**.  
-All ADMIN-specific access and code paths have been removed to simplify deployment and security.
+Now frontend and backend are connected.
 
 ---
 
-## ⚙️ CI/CD Configuration
+## 🔐 Login System
 
-### ✅ Continuous Integration (CI)
-
-File: `.github/workflows/ci.yml`
-
-Workflow includes:
-
-- Frontend build:
-  ```bash
-  npm ci
-  npm run build
-  ```
-
-- Backend compile:
-  ```bash
-  mvn -q -DskipTests compile
-  ```
-
-CI runs automatically on every push and pull request.
+- Users can register and login.
+- Data is saved in the database.
+- When you logout and login again, your progress remains saved.
 
 ---
 
-### 🚀 Continuous Deployment (CD)
+## 🌍 Deployment (Putting Website Online)
 
-File: `.github/workflows/cd.yml`
+This project can be deployed on a Linux server.
 
-On push to `main` branch:
+It uses:
+- Docker (to package the project)
+- GitHub Actions (to automatically deploy when code is updated)
 
-- Builds Docker images for frontend and backend
-- Pushes images to GitHub Container Registry (GHCR)
-- Connects to Linux server via SSH
-- Deploys containers using Docker Compose
+This means:
+Whenever new code is pushed to GitHub, the server updates automatically.
 
 ---
 
-## 🔑 Required GitHub Secrets
+## 📂 How To Upload To GitHub
 
-Configure the following secrets in:
-
-**GitHub → Repository → Settings → Secrets and Variables → Actions**
+Run these commands in your project folder:
 
 ```
-SERVER_HOST
-SERVER_PORT (optional, default 22)
-SERVER_USER
-SERVER_SSH_KEY
-GHCR_USERNAME
-GHCR_TOKEN
-MYSQL_ROOT_PASSWORD
-MYSQL_DATABASE
-MYSQL_USER
-MYSQL_PASSWORD
-APP_JWT_SECRET
-APP_JWT_EXPIRATION_MS
-```
-
-> `GHCR_TOKEN` must have:
-> - read:packages  
-> - write:packages  
-
----
-
-## 🖥 Linux Server Prerequisites
-
-Install Docker and Docker Compose plugin:
-
-```bash
-sudo apt update
-sudo apt install -y docker.io docker-compose-plugin
-sudo systemctl enable --now docker
-```
-
-Ensure the server user has Docker permissions.
-
----
-
-## 📦 Initial Repository Setup
-
-Run the following in the project root:
-
-```bash
 git init
 git add .
-git commit -m "Initial PrepSphere setup with CI/CD and MySQL deployment"
+git commit -m "Initial project setup"
 git branch -M main
-git remote add origin https://github.com/<shreyasrivastava11>/<PrepSphere>.git
+git remote add origin https://github.com/<your-username>/<your-repo>.git
 git push -u origin main
 ```
 
 After pushing:
-- CI runs automatically.
-- On push to `main`, CD deploys to your Linux server.
+The automatic build process will start.
+
+---
+
+## 🎯 Purpose Of This Project
+
+This project shows:
+
+- Full-stack development skills
+- Database integration
+- Backend + Frontend connection
+- Deployment knowledge
+- Basic DevOps understanding
 
 ---
 
@@ -164,14 +132,10 @@ After pushing:
 - Add AI-based interview evaluation
 - Add email notifications
 - Reintroduce role-based access with secure admin panel
-- Add unit & integration test coverage
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 Created By
 
 Shreya Srivastava  
 Full-Stack Developer
-
----
-
