@@ -162,7 +162,6 @@ After pushing:
 ## 🔮 Future Improvements
 
 - Add AI-based interview evaluation
-- Add performance analytics dashboard
 - Add email notifications
 - Reintroduce role-based access with secure admin panel
 - Add unit & integration test coverage
