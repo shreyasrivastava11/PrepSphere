@@ -1,4 +1,4 @@
-## PrepSphere
+# PrepSphere
 PrepSphere is a full-stack mock interview platform.
 
 
@@ -8,15 +8,15 @@ PrepSphere is a full-stack mock interview platform.
 **Deployment:** Render  
 
 ## Local Run
-# Frontend
+ **Frontend**
 npm ci
 npm run dev
 
-# Backend
+ **Backend**
 cd backend
 mvn spring-boot:run
 
-# Render Deployment
+ **Render Deployment**
 Create 2 Render services from this repository.
 
 ---
